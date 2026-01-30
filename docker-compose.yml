@@ -4,7 +4,8 @@ services:
     command: ["--serve"]
     restart: unless-stopped
     volumes:
-      - fabric-config:/root/.config/fabric
+      - /home/linde/.fabric-config:/root/.config/fabric
+      # - fabric-config:/root/.config/fabric
     networks:
       - dokploy-network
     labels:
